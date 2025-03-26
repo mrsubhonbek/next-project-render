@@ -1,4 +1,6 @@
 import React from 'react';
+import { getCategories } from '#/app/api/categories/getCategories';
+import { TabGroup } from '#/ui/tab-group';
 
 const title = 'Nested Layouts';
 
@@ -15,9 +17,23 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-
+  const categories = await getCategories();
   return (
     <div className="space-y-9">
+       <div className="flex justify-between">
+       <TabGroup
+          path="/layouts"
+          items={[
+            {
+              text: 'Home',
+            },
+            ...categories.map((x) => ({
+              text: x.name,
+              slug: x.slug,
+            })),
+          ]}
+        />
+       </div>
       <div>{children}</div>
     </div>
   );
