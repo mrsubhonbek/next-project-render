@@ -3,11 +3,9 @@ import React from 'react';
 
 const Label = ({
   children,
-  animateRerendering,
   color,
 }: {
   children: React.ReactNode;
-  animateRerendering?: boolean;
   color?: 'default' | 'pink' | 'blue' | 'violet' | 'cyan' | 'orange';
 }) => {
   return (
@@ -19,7 +17,6 @@ const Label = ({
         'bg-cyan-500 text-white': color === 'cyan',
         'bg-violet-500 text-violet-100': color === 'violet',
         'bg-orange-500 text-white': color === 'orange',
-        'animate-[highlight_1s_ease-in-out_1]': animateRerendering,
       })}
     >
       {children}
@@ -32,13 +29,11 @@ export const Boundary = ({
   labels = ['children'],
   size = 'default',
   color = 'default',
-  animateRerendering = true,
 }: {
   children: React.ReactNode;
   labels?: string[];
   size?: 'small' | 'default';
   color?: 'default' | 'pink' | 'blue' | 'violet' | 'cyan' | 'orange';
-  animateRerendering?: boolean;
 }) => {
   return (
     <div
@@ -46,13 +41,12 @@ export const Boundary = ({
         'p-3 lg:p-5': size === 'small',
         'p-4 lg:p-9': size === 'default',
         'border-gray-700': color === 'default',
-        'border-pink-500': color === 'pink',
-        'border-blue-500': color === 'blue',
-        'border-cyan-500': color === 'cyan',
-        'border-violet-500': color === 'violet',
-        'border-orange-500': color === 'orange',
-        'animate-[rerender_1s_ease-in-out_1] text-pink-500':
-          animateRerendering,
+        'border-pink-400': color === 'pink',
+        'border-blue-400': color === 'blue',
+        'border-cyan-400': color === 'cyan',
+        'border-violet-400': color === 'violet',
+        'border-orange-400': color === 'orange',
+
       })}
     >
       <div
@@ -69,7 +63,6 @@ export const Boundary = ({
             <Label
               key={label}
               color={color}
-              animateRerendering={animateRerendering}
             >
               {label}
             </Label>
