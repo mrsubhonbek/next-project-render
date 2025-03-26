@@ -1,6 +1,7 @@
 import React from 'react';
 import { getCategories } from '#/app/api/categories/getCategories';
 import { TabGroup } from '#/ui/tab-group';
+import { ClickCounter } from '#/ui/click-counter';
 
 const title = 'Nested Layouts';
 
@@ -33,6 +34,10 @@ export default async function Layout({
             })),
           ]}
         />
+
+        <div className="self-start">
+          <ClickCounter />
+        </div>
        </div>
       <div>{children}</div>
     </div>
