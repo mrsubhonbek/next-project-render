@@ -1,42 +1,20 @@
-# Технологический стек проекта
+# Project technology stack
 
-## Основные технологии
+## Core technologies
 
 ### Framework
 - **[Next.js](https://nextjs.org/)**
-  React-фреймворк для производства с:
-  - Гибкой предварительной отрисовкой (SSG, SSR, ISR, PPR)
-  - Встроенной маршрутизацией
-  - Оптимизацией изображений
-  - API-роутами
+  React framework for production with:
+  - Flexible pre-rendering (SSG, SSR, ISR, PPR)
+  - Built-in routing (parallel, group and stream routing)
+  - Image optimization
+  - API routes
 
-### Стилизация
+### Stylization
 - **[Tailwind CSS](https://tailwindcss.com/)**
-  Утилитарный CSS-фреймворк для:
-  - Быстрой разработки интерфейсов
-  - Отзывчивого дизайна
-  - Минимизации пользовательских CSS
+  A utility CSS framework for:
+  - Rapid interface development
+  - Responsive design
+  - Minifying Custom CSS
 
-## Вспомогательные технологии
-
-### Языки
-- **TypeScript**
-  Для статической типизации
-
-### Форматирование кода
-- **ESLint** + **Prettier**
-  Для поддержания единого стиля кода
-
-## Преимущества стека
-
-1. **Производительность**
-   Next.js обеспечивает оптимизированную загрузку
-
-2. **Developer Experience**
-   Горячая перезагрузка и удобные инструменты
-
-3. **Масштабируемость**
-   Подходит для проектов любого размера
-
-4. **SEO-дружественность**
-   SSR/SSG/ISR/PPR улучшает индексацию
+*pay attention to the path Streaming with Suspense
