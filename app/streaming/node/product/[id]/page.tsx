@@ -1,5 +1,11 @@
 import { Ping } from '#/ui/ping';
+import {
+  RecommendedProducts,
+  RecommendedProductsSkeleton,
+} from '../../_components/recommended-products';
+import { Reviews, ReviewsSkeleton } from '../../_components/reviews';
 import { SingleProduct } from '../../_components/single-product';
+import { Suspense } from 'react';
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
@@ -11,11 +17,38 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
         )}
       />
       <div className="relative">
-        <div className="absolute -left-4 top-2">
+        <div className="absolute top-2 -left-4">
           <Ping />
         </div>
       </div>
-      to-do need add suspense
+      <Suspense fallback={<RecommendedProductsSkeleton />}>
+        <RecommendedProducts
+          path="/streaming/node/product"
+          data={fetch(
+            `https://app-playground-api.vercel.app/api/products?delay=500&filter=${params.id}`,
+            {
+              cache: 'no-store',
+            },
+          )}
+        />
+      </Suspense>
+
+      <div className="relative">
+        <div className="absolute top-2 -left-4">
+          <Ping />
+        </div>
+      </div>
+
+      <Suspense fallback={<ReviewsSkeleton />}>
+        <Reviews
+          data={fetch(
+            `https://app-playground-api.vercel.app/api/reviews?delay=1000`,
+            {
+              cache: 'no-store',
+            },
+          )}
+        />
+      </Suspense>
     </div>
   );
 }
