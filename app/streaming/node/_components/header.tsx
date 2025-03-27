@@ -9,7 +9,6 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-between gap-x-3 rounded-lg bg-gray-800 px-3 py-3 lg:px-5 lg:py-4">
       <div className="flex gap-x-3">
-
         <div className="relative flex-1">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <MagnifyingGlassIcon className="h-5 w-5 text-gray-300" />
@@ -43,4 +42,4 @@ export const Header = () => {
       </div>
     </div>
   );
-}
+};

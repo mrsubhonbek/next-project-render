@@ -46,7 +46,7 @@ export const GlobalNav = () => {
         })}
       >
         <nav className="space-y-6 px-2 pb-24 pt-5">
-        {mock.map((section) => {
+          {mock.map((section) => {
             return (
               <div key={section.name}>
                 <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
@@ -65,7 +65,7 @@ export const GlobalNav = () => {
       </div>
     </div>
   );
-}
+};
 
 function GlobalNavItem({
   item,

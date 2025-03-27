@@ -33,4 +33,4 @@ export const useCartCount = () => {
     throw new Error('useCartCount must be used within a CartCountProvider');
   }
   return context;
-}
+};

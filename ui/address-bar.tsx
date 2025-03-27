@@ -33,7 +33,7 @@ const Params = () => {
       })}
     </div>
   ) : null;
-}
+};
 
 export const AddressBar = () => {
   const pathname = usePathname();
@@ -89,4 +89,4 @@ export const AddressBar = () => {
       </div>
     </div>
   );
-}
+};

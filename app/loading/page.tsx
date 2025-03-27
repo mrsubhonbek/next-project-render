@@ -1,4 +1,3 @@
-
 export default function Page() {
   return (
     <div className="prose prose-sm prose-invert max-w-none">
@@ -20,7 +19,6 @@ export default function Page() {
           clicking a second category before the first one has loaded.
         </li>
       </ul>
-
     </div>
   );
 }

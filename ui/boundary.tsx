@@ -46,7 +46,6 @@ export const Boundary = ({
         'border-cyan-400': color === 'cyan',
         'border-violet-400': color === 'violet',
         'border-orange-400': color === 'orange',
-
       })}
     >
       <div
@@ -60,10 +59,7 @@ export const Boundary = ({
       >
         {labels.map((label) => {
           return (
-            <Label
-              key={label}
-              color={color}
-            >
+            <Label key={label} color={color}>
               {label}
             </Label>
           );

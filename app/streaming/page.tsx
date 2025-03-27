@@ -1,4 +1,3 @@
-
 export default async function Page() {
   return (
     <div className="prose prose-sm prose-invert max-w-none">
@@ -23,7 +22,6 @@ export default async function Page() {
           navigation above.
         </li>
       </ul>
-
     </div>
   );
 }

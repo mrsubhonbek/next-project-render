@@ -8,10 +8,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <Boundary
-      labels={['main layout']}
-      color="orange"
-    >
+    <Boundary labels={['main layout']} color="orange">
       <div className="space-y-9">
         <div className="flex justify-between">
           <div className="self-start">

@@ -79,4 +79,4 @@ export const Pricing = ({
       <AddToCart initialCartCount={Number(cartCount)} />
     </div>
   );
-}
+};

@@ -5,4 +5,4 @@ export const Ping = () => {
       <span className="relative inline-flex h-[11px] w-[11px] rounded-full bg-pink-700"></span>
     </span>
   );
-}
+};

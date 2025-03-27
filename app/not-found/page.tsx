@@ -38,7 +38,6 @@ export default function Page() {
           </em>
         </li>
       </ul>
-
     </div>
   );
 }

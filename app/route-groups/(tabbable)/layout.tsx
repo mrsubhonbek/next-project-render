@@ -12,10 +12,7 @@ export default async function Layout({
   const categories = await getCategories();
 
   return (
-    <Boundary
-      labels={['tabbable layout']}
-      color="orange"
-    >
+    <Boundary labels={['tabbable layout']} color="orange">
       <div className="space-y-9">
         <div className="flex justify-between">
           <TabGroup

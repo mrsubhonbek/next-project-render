@@ -20,4 +20,4 @@ export const BuggyButton = () => {
       Trigger Error
     </Button>
   );
-}
+};
