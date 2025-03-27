@@ -2,12 +2,11 @@ import type { Product } from '#/app/api/products/product';
 import { ProductRating } from '#/ui/product-rating';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
+import { Pricing } from './pricing';
 
 export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
   const product = (await data.then((res) => res.json())) as Product;
 
-  // Get the cart count from the users cookies and pass it to the client
-  // AddToCart component
   const cartCount = (await cookies()).get('_cart_count')?.value || '0';
 
   return (
@@ -67,7 +66,9 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
         </div>
       </div>
 
-      // to-do add pricing
+      <div className="col-span-full lg:col-span-1">
+        <Pricing product={product} cartCount={cartCount} />
+      </div>
     </div>
   );
 };
