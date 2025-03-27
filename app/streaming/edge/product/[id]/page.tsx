@@ -1,11 +1,16 @@
-import { Ping } from '#/ui/ping';
 import {
-  RecommendedProducts,
   RecommendedProductsSkeleton,
-} from '../../../_components/recommended-products';
-import { Reviews, ReviewsSkeleton } from '../../../_components/reviews';
-import { SingleProduct } from '../../../_components/single-product';
+  RecommendedProducts,
+} from '#/app/streaming/_components/recommended-products';
+import {
+  ReviewsSkeleton,
+  Reviews,
+} from '#/app/streaming/_components/reviews';
+import { SingleProduct } from '#/app/streaming/_components/single-product';
+import { Ping } from '#/ui/ping';
 import { Suspense } from 'react';
+
+export const runtime = 'edge';
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
@@ -16,14 +21,16 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           `https://app-playground-api.vercel.app/api/products?id=${params.id}`,
         )}
       />
+
       <div className="relative">
         <div className="absolute top-2 -left-4">
           <Ping />
         </div>
       </div>
+
       <Suspense fallback={<RecommendedProductsSkeleton />}>
         <RecommendedProducts
-          path="/streaming/node/product"
+          path="/streaming/edge/product"
           data={fetch(
             `https://app-playground-api.vercel.app/api/products?delay=500&filter=${params.id}`,
             {
