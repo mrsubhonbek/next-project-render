@@ -27,7 +27,7 @@ export const Header = () => {
       <div className="flex shrink-0 gap-x-3">
         <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-600 text-white">
           <ShoppingCartIcon className="w-6 text-white" />
-          <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-cyan-700 text-sm font-bold text-cyan-800">
+          <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-cyan-300 text-sm font-bold text-cyan-800">
             <CartCount />
           </div>
         </div>
