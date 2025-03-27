@@ -18,7 +18,7 @@ export const Header = () => {
             type="search"
             name="search"
             id="search"
-            className="block w-full rounded-full border-none bg-gray-600 pl-10 font-medium text-gray-200 focus:border-pink-700 focus:ring-2 focus:ring-pink-700"
+            className="block w-full rounded-full border-none bg-gray-600 pl-8 pr-2 py-0.5 font-medium text-gray-200 focus:border-pink-700 focus:ring-2 focus:ring-pink-700"
             autoComplete="off"
           />
         </div>
