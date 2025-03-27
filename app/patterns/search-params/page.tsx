@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Boundary } from '#/ui/boundary';
 import { Suspense } from 'react';
 import ActiveLink from './active-link';
